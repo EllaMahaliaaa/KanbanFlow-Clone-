@@ -28,6 +28,14 @@
         display: flex;
       }
 
+      .flex-col {
+        flex-direction: column;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
       /* Each half */
       .left,
       .right {
@@ -42,12 +50,12 @@
       /* Left side styling */
       .left {
         flex: 3;
-        background-color: #0a0a23; /* Adjust the color to match your design */
+        background-color: #0a0a23;
       }
 
       /* Right side styling */
       .right {
-        background-color: #1b1b38; /* Adjust the color to match your design */
+        background-color: #1b1b38;
       }
 
       /* Header styling */
@@ -75,7 +83,8 @@
 
       .btn-group {
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 10px;
         width: 50vh;
       }
 
@@ -95,6 +104,14 @@
         <div class="flex btn-group">
           <a href="" class="btn">Log in</a>
           <a href="" class="btn">Sign up</a>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <h2>Brello.</h2>
+          <div>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of use</a>
+          </div>
         </div>
       </div>
     </div>
