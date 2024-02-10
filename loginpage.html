@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: "Arial", sans-serif;
+      }
+
+      /* Container holding the two halves */
+      .split-container {
+        display: flex;
+        height: 100vh;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      /* Each half */
+      .left,
+      .right {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+      }
+
+      /* Left side styling */
+      .left {
+        flex: 3;
+        background-color: #0a0a23; /* Adjust the color to match your design */
+      }
+
+      /* Right side styling */
+      .right {
+        background-color: #1b1b38; /* Adjust the color to match your design */
+      }
+
+      /* Header styling */
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      /* Button styling */
+      .btn {
+        background-color: #5643fa; /* Button color */
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        color: white;
+        transition: background-color 0.3s ease;
+        width: 150px;
+      }
+
+      .btn-group {
+        align-items: center;
+        justify-content: space-around;
+        width: 50vh;
+      }
+
+      .btn:hover {
+        background-color: #4133c9; /* Button hover color */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="split-container">
+      <div class="left">
+        <h1>Brello.</h1>
+        <p>Enter summary of Brello here.</p>
+      </div>
+      <div class="right">
+        <h1>Get started</h1>
+        <div class="flex btn-group">
+          <a href="" class="btn">Log in</a>
+          <a href="" class="btn">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
