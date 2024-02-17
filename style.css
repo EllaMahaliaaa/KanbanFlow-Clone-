@@ -1,78 +1,108 @@
-/* CSS FILE */
 /* Basic reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body,
-  html {
-    height: 100%;
-    font-family: "Arial", sans-serif;
-  }
+body,
+html {
+  height: 100%;
+  font-family: "Arial", sans-serif;
+}
 
-  /* Container holding the two halves */
-  .split-container {
-    display: flex;
-    height: 100vh;
-  }
+a {
+  text-decoration: none;
+  color: grey;
+}
 
-  .flex {
-    display: flex;
-  }
+/* Container holding the two halves */
+.split-container {
+  display: flex;
+  height: 100vh;
+}
 
-  /* Each half */
-  .left,
-  .right {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-  }
+.flex {
+  display: flex;
+}
 
-  /* Left side styling */
-  .left {
-    flex: 3;
-    background-color: #0a0a23; /* Adjust the color to match your design */
-  }
+.space-between {
+  justify-content: space-between;
+}
 
-  /* Right side styling */
-  .right {
-    background-color: #1b1b38; /* Adjust the color to match your design */
-  }
+.space-around {
+  justify-content: space-around;
+}
 
-  /* Header styling */
-  h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
+.flex-col {
+  flex-direction: column;
+}
 
-  /* Button styling */
-  .btn {
-    background-color: #5643fa; /* Button color */
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
-    transition: background-color 0.3s ease;
-    width: 150px;
-  }
+.justify-center {
+  align-items: center;
+  justify-content: center;
+}
 
-  .btn-group {
-    align-items: center;
-    justify-content: space-around;
-    width: 50vh;
-  }
+/* Each half */
+.left,
+.right {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
 
-  .btn:hover {
-    background-color: #4133c9; /* Button hover color */
-  }
+/* Left side styling */
+.left {
+  flex: 3;
+  background-color: #0a0a23;
+}
+
+/* Right side styling */
+.right {
+  background-color: #1b1b38;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn {
+  background-color: #5643fa; /* Button color */
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+.btn-group {
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 50vh;
+}
+
+.btn:hover {
+  background-color: #4133c9; /* Button hover color */
+}
+
+.bottom-absolute {
+  position: absolute;
+  bottom: 15px;
+}
+.privacy-stuff {
+  width: 250px;
+}
