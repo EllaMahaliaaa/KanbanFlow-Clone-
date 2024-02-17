@@ -15,6 +15,9 @@ a {
   text-decoration: none;
   color: grey;
 }
+a:hover {
+  color: lightgrey;
+}
 
 /* Container holding the two halves */
 .split-container {
