@@ -1,30 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import {Button} from "reactstrap";
 
-let myvar = 1;
-const inochange = 1;
+import "./App.css";
 
-function myClickHandler(){
-  console.log(myvar);
-  document.getElementById('summary').innerHTML = "Keep calm and Log in bro!!!" 
-}
-function myClickHandler2(){
-  console.log(myvar);
-  document.getElementById('summary').innerHTML = "SIke! You need to Create an account first!!!" 
-}
-//console.log(myvar);
 function App() {
   return (
     <div class="split-container">
       <div class="left">
         <h1>Brello.</h1>
-        <p id="summary"></p>
+        <p>Text describing what Brello does</p>
       </div>
       <div class="right flex flex-col">
         <h1>Get started</h1>
         <div class="flex btn-group">
-          <button className="btn" onClick={myClickHandler}> Log in</button>
-          <button className="btn" onClick={myClickHandler2}> Sign up</button>
+          <Button color="primary" block size="lg">
+            Log in
+          </Button>
+          <Button color="primary" outline block size="lg">
+            Sign up
+          </Button>
         </div>
 
         <div class="flex flex-col justify-center bottom-absolute">
