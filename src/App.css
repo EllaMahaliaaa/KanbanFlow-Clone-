@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-purple: #49108b;
+  --main-white: #f3f8ff;
+  --secondary-purple: #7e30e1;
+  --secondary-pink: #e26ee5;
+}
+
 body,
 html {
   height: 100%;
@@ -61,12 +68,13 @@ a {
 /* Left side styling */
 .left {
   flex: 3;
-  background-color: #0a0a23;
+  background-color: var(--main-purple);
 }
 
 /* Right side styling */
 .right {
-  background-color: #1b1b38;
+  background-color: var(--main-white);
+  color: var(--main-purple);
 }
 
 /* Header styling */
@@ -77,14 +85,24 @@ h1 {
 
 /* Button styling */
 .btn {
-  /* background-color: #5643fa; 
+  background-color: var(--main-purple);
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
   color: white;
   transition: background-color 0.3s ease;
-  width: 150px; */
+  width: 180px;
+  height: 45px;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-right {
+  background-color: var(--main-white);
+  border: 2px solid var(--secondary-purple);
+  color: var(--main-purple);
+  transition: 0.3s ease-out;
 }
 
 .btn-group {
@@ -95,7 +113,9 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #4133c9; /* Button hover color */
+  background-color: var(--secondary-purple); /* Button hover color */
+  color: var(--main-white);
+  transition: 0.3s ease-in;
 }
 
 .bottom-absolute {

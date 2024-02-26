@@ -1,7 +1,5 @@
 import logo from "./logo.svg";
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import {Button} from "reactstrap";
 
 import "./App.css";
 
@@ -15,12 +13,8 @@ function App() {
       <div class="right flex flex-col">
         <h1>Get started</h1>
         <div class="flex btn-group">
-          <Button color="primary" block size="lg">
-            Log in
-          </Button>
-          <Button color="primary" outline block size="lg">
-            Sign up
-          </Button>
+          <button class="btn">Log in</button>
+          <button class="btn btn-right">Sign up</button>
         </div>
 
         <div class="flex flex-col justify-center bottom-absolute">
