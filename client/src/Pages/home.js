@@ -36,6 +36,7 @@ function Home() {
         </div>
         <div class="flex btn-group">
         <Link to="/board" className="btn"> Board</Link>
+        <Link to="/dashboard" className='btn'>DashBoard</Link>
         </div>
 
         <div class="flex flex-col justify-center bottom-absolute">
