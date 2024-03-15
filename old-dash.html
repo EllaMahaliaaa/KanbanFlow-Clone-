@@ -2,10 +2,11 @@
 <span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
     <html lang="en">
     <head>
-      <meta charset="UTF-8" />
-      <title>Dashboard | By Code Info</title>
-      <link rel="stylesheet" href="style.css" />
-      <!-- Font Awesome Cdn Link -->
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, inital-scale=1.0">
+      <title>Dashboard</title>
+      <link rel="stylesheet" href="old.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     </head>
     <body>
@@ -22,10 +23,6 @@
             <li><a href="">
               <i class="fas fa-user"></i>
               <span class="nav-item">Profile</span>
-            </a></li>
-            <li><a href="">
-              <i class="fas fa-wallet"></i>
-              <span class="nav-item">Wallet</span>
             </a></li>
             <li><a href="">
               <i class="fas fa-th-list"></i>
@@ -45,7 +42,7 @@
             </a></li>
           </ul>
         </nav>
-    
+   
         <section class="main">
           <section class="main-course">
             <h1>My Workspaces</h1>
@@ -53,30 +50,77 @@
               <ul>
                 <li class="active">My Boards</li>
                 <li>Views</li>
-                <li>board settings</li>
+                <li>Board Settings</li>
               </ul>
               <div class="course">
                 <div class="box">
-                  <h3>Board 1</h3>
+                  <h3 class="box-head">Board 1</h3>
                   <button>select</button>
+                  <button>rename</button>
                   <button>add members</button>
                 </div>
                 <div class="box">
-                  <h3>Board 2</h3>
+                  <h3 class="box-head">Board 2</h3>
                   <button>select</button>
+                  <button>rename</button>
                   <button>add members</button>
                 </div>  
-                <div class="box">
-                  <h3>Create New Board</h3>
-                  <button>edit</button>
+                <div class="new-box">
+                  <h3 class="box-head">Create New Board</h3>
+                  <button>+</button>
                   <button>add members</button>
                 </div>
               </div>
             </div>
           </section>
+
+
+          <section class="main-tasks">
+            <h1>My Tasks</h1>
+            <div class="course-box">
+              <ul>
+                <li class="active">In Progress</li>
+                <li>Completed</li>
+              </ul>
+              <div class="course">
+                <div class="box">
+                  <h3 class="box-head">Doing</h3>
+                  <ul class="vertical-list">
+                    <li>These</li>
+                    <li>Are</li>
+                    <li>Some</li>
+                    <li>Tasks</li>
+                  </ul>
+                </div>
+                <div class="box">
+                  <h3 class="box-head">To-Do</h3>
+                  <ul class="vertical-list">
+                    <li>These</li>
+                    <li>Are</li>
+                    <li>More</li>
+                    <li>Tasks</li>
+                  </ul>
+                </div>  
+                <div class="box">
+                  <h3 class="box-head">Backlog</h3>
+                  <ul class="vertical-list">
+                    <li>Should</li>
+                    <li>Have</li>
+                    <li>Done</li>
+                    <li>These</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
         </section>
+
+
       </div>
+     
     </body>
     </html></span>
+
 
 </html>
