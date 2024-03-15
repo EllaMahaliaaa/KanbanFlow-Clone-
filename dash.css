@@ -133,4 +133,5 @@ a:hover{
   writing-mode: vertical-rl;
   text-orientation: mixed;
   text-align: center;
+  background: linear-gradient(180deg, #000, #442d80)
 }
