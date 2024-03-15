@@ -1,5 +1,5 @@
 import '../style/App.css';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 let myvar = 1;
@@ -14,6 +14,14 @@ function myClickHandler2(){
 }
 //console.log(myvar);
 function Home() {
+
+  useEffect(()=>{
+    fetch("/api/5")
+    .then((response) => response.json().then((json)=> console.log(json))
+    );
+  },[]);
+
+
   return (
     <div class="split-container">
       <div class="left">
