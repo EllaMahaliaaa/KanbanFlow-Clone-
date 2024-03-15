@@ -1,0 +1,9 @@
+body{
+    background-color:salmon;
+    font-family:sans-serif;    
+}
+h1{
+    padding: 5px;
+    color: aliceblue;
+    text-align: center;
+}
