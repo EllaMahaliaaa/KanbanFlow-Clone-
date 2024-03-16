@@ -1,6 +1,7 @@
 import '../style/App.css';
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import LoginButton from '../components/Login';
 
 let myvar = 1;
 
@@ -32,6 +33,7 @@ function Home() {
         <h1>Get started</h1>
         <div class="flex btn-group">
           <Link className="btn" onClick={myClickHandler}> Log in</Link>
+          <LoginButton/>
           <Link className="btn" onClick={myClickHandler2}> Sign up</Link>
         </div>
         <div class="flex btn-group">
