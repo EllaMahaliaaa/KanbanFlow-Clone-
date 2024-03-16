@@ -3,9 +3,17 @@
     display: flex ;
     justify-content: space-around;
     padding: 20;
+    margin-left: 2rem;
     background-color: var(--background-dark);
+    flex-grow: 1;
   }
 
+  @media screen and (max-width: 768px) {
+    .board-container {
+      flex-direction: column; 
+      margin-left: 0;
+    }
+  }
   .col-container {
     justify-content: center;
     align-items: center; 
@@ -13,7 +21,7 @@
     text-align: center;
   }
   .column {
-    margin: 8px;
+    margin: 10px;
     border-radius: 10px;
     background: rgb(61, 19, 165);
     padding: 4px;
