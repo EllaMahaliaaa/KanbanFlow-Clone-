@@ -6,17 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const { REACT_APP__AUTH0_DOMAIN, REACT_APP__AUTH0_CLIENT_ID } = process.env
+console.log(REACT_APP__AUTH0_DOMAIN, REACT_APP__AUTH0_CLIENT_ID)
 
-<Auth0Provider
-    domain={domain}
-    clientId={clientId}
-    redirectUri={window.location.origin}
->
-</Auth0Provider>
 root.render(
-    <App />
+    <React.StrictMode>
+    <Auth0Provider
+      domain={REACT_APP__AUTH0_DOMAIN}
+      clientId={REACT_APP__AUTH0_CLIENT_ID}
+      authorizationParams={{
+        redirect_uri: window.location.origin
+      }}
+    >
+      <App />
+    </Auth0Provider>,
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
