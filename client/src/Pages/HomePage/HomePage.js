@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import "./HomePage.css";
-import LoginButton from "../../components/UserInfo/LoginButton";
+import LoginButton from "../../components/LoginButton/LoginButton";
 
 //console.log(myvar);
 function Home() {
@@ -20,14 +20,8 @@ function Home() {
       <div class="right flex flex-col">
         <h1>Get started</h1>
         <div class="flex btn-group">
-          <Link className="btn">
-            {" "}
-            <LoginButton />
-          </Link>
-          <Link className="btn">
-            {" "}
-            Sign up
-          </Link>
+          <LoginButton />
+          <Link className="btn"> Sign up</Link>
         </div>
         <div class="flex btn-group">
           <Link to="/board" className="btn">
