@@ -1,53 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
-*{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+/* body {
+  background: #161131;
+  color: #f4f3ee;
 }
-body{
-  background: #190E4F;
-  color: #F4F3EE
-}
-.container{
+.container {
   display: flex;
 }
-nav{
+nav {
   position: relative;
   top: 0;
   bottom: 0;
   height: 100vh;
   left: 0;
-  background: #190E4F;
+  background: #190e4f;
   width: 280px;
   overflow: hidden;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.logo{
+.logo {
   text-align: center;
   display: flex;
   margin: 10px 0 0 10px;
 }
 
-
-.logo span{
+.logo span {
   font-weight: bold;
   padding-left: 15px;
   font-size: 18px;
   text-transform: uppercase;
 }
-a{
+a {
   position: relative;
-  color: #F4F3EE;
+  color: #f4f3ee;
   font-size: 14px;
   display: table;
   width: 280px;
   padding: 10px;
 }
-nav .fas{
+nav .fas {
   position: relative;
   width: 70px;
   height: 40px;
@@ -55,29 +44,29 @@ nav .fas{
   font-size: 20px;
   text-align: center;
 }
-.nav-item{
+.nav-item {
   position: relative;
   top: 12px;
   margin-left: 10px;
 }
-a:hover{
+a:hover {
   background: #442d80;
 }
-.logout{
+.logout {
   position: absolute;
   bottom: 0;
 }
-/* Main Section */
-.main{
+/* Main Section 
+.main {
   position: relative;
   padding: 20px;
   width: 100%;
 }
-.main-top{
+.main-top {
   display: flex;
   width: 100%;
 }
-.main-top i{
+.main-top i {
   position: absolute;
   right: 0;
   margin: 10px 30px;
@@ -85,14 +74,12 @@ a:hover{
   cursor: pointer;
 }
 
-
 .main-course,
 .main-tasks {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
-
-.course-box{
+.course-box {
   width: 100%;
   height: auto;
   padding: 10px 10px 30px 10px;
@@ -101,61 +88,58 @@ a:hover{
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.course-box ul{
+.course-box ul {
   list-style: none;
   display: flex;
 }
-.course-box ul li{
+.course-box ul li {
   margin: 10px;
   color: whitesmoke;
   cursor: pointer;
- 
 }
-.course-box ul .active{
-  color: #9191E9;
-  border-bottom: 1px solid #9191E9;
+.course-box ul .active {
+  color: #9191e9;
+  border-bottom: 1px solid #9191e9;
 }
-
 
 .course-box ul li:hover {
   transform: scale(1.1);
 }
-.course-box .course{
+.course-box .course {
   display: flex;
 }
-.box{
+.box {
   width: 33%;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background: linear-gradient(to bottom right, #5643fa, #9191E9);
+  background: linear-gradient(to bottom right, #5643fa, #9191e9);
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.box p{
+.box p {
   font-size: 12px;
   margin-top: 5px;
 }
-.box button{
-  background: #190E4F;
+.box button {
+  background: #190e4f;
   color: #fff;
   padding: 7px 10px;
   border-radius: 10px;
   margin-top: 3rem;
   cursor: pointer;
 }
-.box button:hover{
-  background: #9191E9;
+.box button:hover {
+  background: #9191e9;
   color: #000;
   transform: scale(1.1);
 }
-.box i{
+.box i {
   font-size: 7rem;
   float: right;
   margin: -20px 20px 20px 0;
 }
 
-
-.new-box{
+.new-box {
   width: 33%;
   padding: 10px;
   margin: 10px;
@@ -163,58 +147,49 @@ a:hover{
   background: linear-gradient(to bottom right, whitesmoke, rgb(177, 175, 175));
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.new-box p{
+.new-box p {
   font-size: 12px;
   margin-top: 5px;
-  color: #000
+  color: #000;
 }
-.new-box button{
-  background: #190E4F;
+.new-box button {
+  background: #190e4f;
   color: #fff;
   padding: 7px 10px;
   border-radius: 10px;
   margin-top: 3rem;
   cursor: pointer;
 }
-.new-box button:hover{
-  background: #9191E9;
+.new-box button:hover {
+  background: #9191e9;
   color: #000;
   transform: scale(1.1);
 }
-.new-box i{
+.new-box i {
   font-size: 7rem;
   float: right;
   margin: -20px 20px 20px 0;
 }
 
-
 .box-head {
-  color:#190E4F;
+  color: #190e4f;
 }
-
 
 .vertical-list {
   display: flex;
   flex-direction: column;
 }
 
-
 .vertical-list li {
   margin-bottom: 5px;
 }
 
-
-.html{
+.html {
   color: rgb(25, 94, 54);
 }
-.css{
+.css {
   color: rgb(104, 179, 35);
 }
-.js{
+.js {
   color: rgb(28, 98, 179);
-}
-
-
-
-
-
+} */

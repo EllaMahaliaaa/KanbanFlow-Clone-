@@ -1,15 +1,8 @@
-
 /* Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100%;
-  font-family: "Arial", sans-serif;
 }
 
 a {
@@ -58,12 +51,12 @@ a {
 /* Left side styling */
 .left {
   flex: 3;
-  background-color: #0a0a23;
+  background-color: var(--background-dark);
 }
 
 /* Right side styling */
 .right {
-  background-color: #1b1b38;
+  background-color: var(--background-light);
 }
 
 /* Header styling */
