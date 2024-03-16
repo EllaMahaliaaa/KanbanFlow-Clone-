@@ -1,5 +1,7 @@
 import React from "react";
 import "./Dashboard.css";
+import {Link} from "react-router-dom";
+
 const Dashboard = () => {
   return (
     <div class="container">
@@ -79,7 +81,7 @@ const Dashboard = () => {
               </div>
               <div class="new-box">
                 <h3 class="box-head">Create New Board</h3>
-                <button>+</button>
+                <Link className="link" to="/board"><button>+</button></Link>
                 <button>add members</button>
               </div>
             </div>

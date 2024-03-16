@@ -3,24 +3,20 @@ import {Droppable, Draggable} from "react-beautiful-dnd";
 import Card from "./Card";
 // import '../style/board.css';
 import Add from "./Add";
+import "./Board/board.css";
+
 
 const Column = ({column, tasks, addCard}) => {
-  const col_style = {
-    background: "purple",
-    padding: 4,
-    width: 250,
-    minHeight: 400,
-  };
 
   return (
-    <div className="column">
-      <h2>{column.title}</h2>
+    <div className="col-container">
+      <h2 className="column-h2">{column.title}</h2>
       <Droppable droppableId={column.id}>
         {(provided) => (
           <div
             ref={provided.innerRef}
             {...provided.droppableProps}
-            style={col_style}>
+            className="column">
             {tasks &&
               tasks.map((task, index) => (
                 <Draggable key={task.id} draggableId={task.id} index={index}>

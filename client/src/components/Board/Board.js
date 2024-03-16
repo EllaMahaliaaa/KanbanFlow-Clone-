@@ -142,7 +142,7 @@ const Board = () => {
   };
 
   return (
-    <div className="board-col">
+    <div className="board-container">
       <DragDropContext onDragEnd={onDragEnd}>
         {data.columnOrder.map((columnId) => {
           const column = data.columns[columnId];
@@ -160,7 +160,9 @@ const Board = () => {
           );
         })}
       </DragDropContext>
-      <Add buttonText="Add Column" onSubmit={(title) => addColumn(title)} />
+      <div className="btn-column">
+        <Add buttonText="Add Column" onSubmit={(title) => addColumn(title)} />
+      </div>
     </div>
   );
 };

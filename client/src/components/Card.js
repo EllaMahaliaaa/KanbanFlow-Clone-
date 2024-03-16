@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Board/board.css";
 
 const Card = ({ task }) => {
   return (

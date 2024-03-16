@@ -6,7 +6,7 @@ import Dashboard from "./Pages/DashboardPage/Dashboard";
 import "./App.css";
 
 /**import { useAuth0 } from '@auth0/auth0-react';*/
-import LoginButton from "./components/LoginButton";
+/*import LoginButton from "./components/LoginButton";*/
 /*import ProfilePage from './ProfilePage';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';**/
@@ -26,3 +26,4 @@ const App = () => {
 };
 
 export default App;
+

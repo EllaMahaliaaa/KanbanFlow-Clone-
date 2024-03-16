@@ -1,9 +1,7 @@
-/* body {
-  background: #161131;
-  color: #f4f3ee;
-}
 .container {
   display: flex;
+  background: #161131;
+  color: #f4f3ee;
 }
 nav {
   position: relative;
@@ -28,6 +26,12 @@ nav {
   font-size: 18px;
   text-transform: uppercase;
 }
+.link{
+  padding: 10px;
+  max-height: 10px;
+  width: 20px;
+}
+
 a {
   position: relative;
   color: #f4f3ee;
@@ -49,14 +53,10 @@ nav .fas {
   top: 12px;
   margin-left: 10px;
 }
-a:hover {
-  background: #442d80;
-}
 .logout {
   position: absolute;
   bottom: 0;
 }
-/* Main Section 
 .main {
   position: relative;
   padding: 20px;
@@ -192,4 +192,4 @@ a:hover {
 }
 .js {
   color: rgb(28, 98, 179);
-} */
+}

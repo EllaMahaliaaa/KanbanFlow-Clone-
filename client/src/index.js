@@ -16,7 +16,7 @@ const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 >
 </Auth0Provider>
 root.render(
-  <App />
+    <App />
 );
 
 // If you want to start measuring performance in your app, pass a function

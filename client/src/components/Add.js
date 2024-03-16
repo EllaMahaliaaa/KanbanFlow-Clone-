@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "./Board/board.css";
 
 const Add = ({ buttonText, onSubmit }) => {
     const [showInput, setShowInput] = useState(false);
@@ -24,7 +24,7 @@ const Add = ({ buttonText, onSubmit }) => {
     return (
         <div>
             {!showInput ? (
-                <button onClick={handleButtonClick}>{buttonText}</button>
+                <button onClick={handleButtonClick} className='btn-plus'>+</button>
             ) : (
                 <div>
                     <input
@@ -32,8 +32,9 @@ const Add = ({ buttonText, onSubmit }) => {
                         value={inputValue}
                         onChange={handleInputChange}
                         placeholder={`Enter ${buttonText}`}
+                        className="inputs"
                     />
-                    <button onClick={handleSubmit}>Submit</button>
+                    <button onClick={handleSubmit} className='btn-submit'>Submit</button>
                 </div>
             )}
         </div>
