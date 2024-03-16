@@ -1,10 +1,18 @@
 import React, {useState} from 'react';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import Card from './Card';
-import './board.css';
+import '../style/board.css';
 import Add from './Add';
 
-const Column = ({ column, tasks, addCard }) => {  
+const Column = ({ column, tasks, addCard }) => { 
+  
+  const col_style={
+  background: 'purple',
+  padding: 4,
+  width: 250,
+  minHeight: 400
+}
+
   return (
     <div className='column'>
       <h2>{column.title}</h2>
@@ -13,14 +21,9 @@ const Column = ({ column, tasks, addCard }) => {
           <div
             ref={provided.innerRef}
             {...provided.droppableProps}
-            style={{
-              background: 'purple',
-              padding: 4,
-              width: 250,
-              minHeight: 400,
-            }}
+            style={col_style}
           >
-            {tasks.map((task, index) => (
+            {tasks && tasks.map((task, index) => (
               <Draggable key={task.id} draggableId={task.id} index={index}>
                 {(provided) => (
                   <div
@@ -45,5 +48,6 @@ const Column = ({ column, tasks, addCard }) => {
     </div>
   );
 };
+
 
 export default Column;

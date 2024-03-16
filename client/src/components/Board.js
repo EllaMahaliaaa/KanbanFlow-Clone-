@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
-import "./board.css"
+import "../style/board.css";
 import Add from './Add';
 
 const initialData = {
-  tasks: {
-    'task-1': { id: 'task-1', content: 'Task 1' },
-    'task-2': { id: 'task-2', content: 'Task 2' },
-    'task-3': { id: 'task-3', content: 'Task 3' },
-  },
+  tasks: {},
   columns: {
     'column-1': {
       id: 'column-1',
       title: 'To Do',
-      taskIds: ['task-1', 'task-2', 'task-3'],
+      taskIds: [],
     },
     'column-2': {
       id: 'column-2',
@@ -30,52 +26,72 @@ const initialData = {
   columnOrder: ['column-1', 'column-2', 'column-3'],
 };
 
-const KanbanBoard = () => {
+
+
+const Board = () => {
   const [data, setData] = useState(initialData);
-  const [newCardInput, setNewCardInput] = useState('');
-  const [newColumnInput, setNewColumnInput] = useState('');
 
   const onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
   
-    // If there is no destination, or the destination is the same as the source,
-    // or the draggable is dropped back to its original position, do nothing
+    // If there is no destination or the draggable is dropped back to its original position, do nothing
     if (!destination || (destination.droppableId === source.droppableId && destination.index === source.index)) {
       return;
     }
   
     const startColumn = data.columns[source.droppableId];
-    const endColumn = data.columns[destination.droppableId];
   
-    // Remove the dragged task from its original column
-    const startTaskIds = Array.from(startColumn.taskIds);
-    startTaskIds.splice(source.index, 1);
-    const newStartColumn = {
-      ...startColumn,
-      taskIds: startTaskIds,
-    };
+    // If the draggable is dropped within the same column
+    if (destination.droppableId === source.droppableId) {
+      const newTaskIds = Array.from(startColumn.taskIds);
+      newTaskIds.splice(source.index, 1); // Remove the dragged task from its original position
+      newTaskIds.splice(destination.index, 0, draggableId); // Insert the dragged task at the new position
   
-    // Add the dragged task to the new column
-    const endTaskIds = Array.from(endColumn.taskIds);
-    endTaskIds.splice(destination.index, 0, draggableId);
-    const newEndColumn = {
-      ...endColumn,
-      taskIds: endTaskIds,
-    };
+      const newColumn = {
+        ...startColumn,
+        taskIds: newTaskIds,
+      };
   
-    // Update the state with the new column order and column data
-    const newState = {
-      ...data,
-      columns: {
-        ...data.columns,
-        [newStartColumn.id]: newStartColumn,
-        [newEndColumn.id]: newEndColumn,
-      },
-    };
+      const newState = {
+        ...data,
+        columns: {
+          ...data.columns,
+          [newColumn.id]: newColumn,
+        },
+      };
   
-    setData(newState);
+      setData(newState);
+    } else { // If the draggable is dropped in a different column
+      const endColumn = data.columns[destination.droppableId];
+  
+      // Remove the dragged task from its original column
+      const startTaskIds = Array.from(startColumn.taskIds);
+      startTaskIds.splice(source.index, 1);
+      const newStartColumn = {
+        ...startColumn,
+        taskIds: startTaskIds,
+      };
+  
+      // Add the dragged task to the new column
+      const endTaskIds = Array.from(endColumn.taskIds);
+      endTaskIds.splice(destination.index, 0, draggableId);
+      const newEndColumn = {
+        ...endColumn,
+        taskIds: endTaskIds,
+      };
+  
+      const newState = {
+        ...data,
+        columns: {
+          ...data.columns,
+          [newStartColumn.id]: newStartColumn,
+          [newEndColumn.id]: newEndColumn,
+        },
+      };
+  
+      setData(newState);
+    }
   };
-  
 
   const addCard = (columnId, content) => {
     //create an id for tast aka card
@@ -127,7 +143,7 @@ const KanbanBoard = () => {
       <DragDropContext onDragEnd={onDragEnd}>
         {data.columnOrder.map((columnId) => {
           const column = data.columns[columnId];
-          const tasks = column.taskIds.map((taskId) => data.tasks[taskId]);
+          const tasks = column.taskIds.map((taskId) => data.tasks[taskId] || {});
 
           return <Column key={column.id} column={column} tasks={tasks} addCard={addCard}/>;
         })}
@@ -141,4 +157,4 @@ const KanbanBoard = () => {
   );
 };
 
-export default KanbanBoard;
+export default Board;

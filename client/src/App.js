@@ -4,11 +4,15 @@ import Home from './Pages/home';
 import BoardPage from './Pages/BoardPage';
 import './style/App.css';
 import Dashboard from './Pages/Dashboard';
+/**import { useAuth0 } from '@auth0/auth0-react';*/
+import LoginButton from './components/LoginButton';
 /*import ProfilePage from './ProfilePage';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';**/
 
 const App = () => {
+  /*const { isAuthenticated } =useAuth0();
+  console.log(isAuthenticated);*/
   return (
     <Router>
       <Routes>
