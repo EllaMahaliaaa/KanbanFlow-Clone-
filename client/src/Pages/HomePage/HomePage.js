@@ -1,18 +1,8 @@
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import "./HomePage.css";
+import LoginButton from "../../components/UserInfo/LoginButton";
 
-let myvar = 1;
-
-function myClickHandler() {
-  console.log(myvar);
-  document.getElementById("summary").innerHTML = "Keep calm and Log in bro!!!";
-}
-function myClickHandler2() {
-  console.log(myvar);
-  document.getElementById("summary").innerHTML =
-    "SIke! You need to Create an account first!!!";
-}
 //console.log(myvar);
 function Home() {
   useEffect(() => {
@@ -30,11 +20,8 @@ function Home() {
       <div class="right flex flex-col">
         <h1>Get started</h1>
         <div class="flex btn-group">
-          <Link className="btn" onClick={myClickHandler}>
-            {" "}
-            Log in
-          </Link>
-          <Link className="btn" onClick={myClickHandler2}>
+          <LoginButton />
+          <Link className="btn">
             {" "}
             Sign up
           </Link>
